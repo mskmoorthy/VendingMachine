@@ -1,4 +1,4 @@
 language: python
 python: 
     - "2.7"
-script: test_VendingMachine
+script: python test_VendingMachine.py
