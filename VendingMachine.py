@@ -51,7 +51,7 @@ class VendingMachine():
         return returnBalance
 
     def addMoney(self, moneyInput):
-        self.pendingBalance = moneyInput
+        self.pendingBalance += moneyInput
 
     def purchase(self, location):
         item = self.items[location]
