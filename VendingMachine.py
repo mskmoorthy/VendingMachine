@@ -10,6 +10,9 @@ class Item(object):
 
     def __str__(self):
         return "%s: \n\t%d at $%.2f" % (self.name, self.quantity, self.price)
+    
+    def __eq__(self, other):
+        return self.name == other.name  and self.price == other.price
 
     def purchase(self):
         self.quantity -= 1
@@ -48,7 +51,7 @@ class VendingMachine():
         return returnBalance
 
     def addMoney(self, moneyInput):
-        self.pendingBalance += moneyInput
+        self.pendingBalance = moneyInput
 
     def purchase(self, location):
         item = self.items[location]
