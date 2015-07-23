@@ -15,7 +15,7 @@ class Item(object):
         return self.name == other.name  and self.price == other.price
 
     def purchase(self):
-        self.quantity -= 1
+        self.quantity -= 2 ## instead of -=1 error introduced by msk
 
 
 class VendingMachine():
